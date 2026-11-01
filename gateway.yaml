@@ -1,0 +1,11 @@
+# Clients use this alias; only the gateway knows the provider and its key.
+model_list:
+  - model_name: gemini-learning
+    litellm_params:
+      model: gemini/gemini-3.1-flash-lite
+      api_key: os.environ/LITELLM_API_KEY
+      timeout: 60
+
+litellm_settings:
+  request_timeout: 60
+  num_retries: 0
